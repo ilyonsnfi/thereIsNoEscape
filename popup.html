@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 200px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+    }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .toggle-container label {
+      margin-left: 8px;
+    }
+    input[type="checkbox"] {
+      margin: 0;
+    }
+    .description {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      margin-left: 20px;
+    }
+    .input-container label {
+      margin-right: 8px;
+      font-size: 12px;
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 2px 4px;
+      font-size: 12px;
+    }
+    .hidden {
+      display: none;
+    }
+    .reload-notice {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 4px;
+      padding: 8px;
+      margin-top: 16px;
+      font-size: 12px;
+      color: #856404;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-container">
+    <input type="checkbox" id="enabled" checked>
+    <label for="enabled">Block Esc key</label>
+  </div>
+  <div class="description">Prevents Halo from capturing Esc</div>
+  
+  <div class="toggle-container">
+    <input type="checkbox" id="doubleEscBypass">
+    <label for="doubleEscBypass">Double-Esc bypass</label>
+  </div>
+  <div class="description">Allow double-Esc to pass through</div>
+  
+  <div class="input-container" id="timeoutContainer">
+    <label for="timeout">Timeout:</label>
+    <input type="number" id="timeout" value="500" min="100" max="2000" step="50">
+    <span style="font-size: 12px; margin-left: 4px;">ms</span>
+  </div>
+
+  <div class="reload-notice hidden" id="reloadNotice">
+    Reload halopsa.com to apply changes
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
