@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Halo Esc Key Blocker",
-  "version": "1.0",
-  "description": "Prevents halopsa.com from capturing the Esc key",
+  "version": "0.1",
+  "description": "Prevents halopsa.com capturing the Esc key",
   "content_scripts": [
     {
       "matches": ["*://*.halopsa.com/*"],
@@ -13,6 +13,11 @@
   "action": {
     "default_popup": "popup.html",
     "default_title": "Halo Esc Key Blocker"
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
   },
   "permissions": ["storage"]
 }
