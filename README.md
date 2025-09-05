@@ -11,8 +11,8 @@ A Chrome extension that prevents HaloPSA from capturing the Esc key, so you neve
 
 ## Installation
 
-### Chrome Web Store (Coming Soon)
-The extension will be available on the Chrome Web Store shortly. We'll update this README with the store link once it's approved.
+### Chrome Web Store
+https://chromewebstore.google.com/detail/halo-esc-key-blocker/ecpfoneoclmhemfbhiapjjcmbfdibabm?authuser=0&hl=en
 
 ### Manual Installation (Developer Mode)
 
