@@ -1,0 +1,885 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1555A282E577AAA0013BF8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1555A272E577AAA0013BF8F /* AppDelegate.swift */; };
+		B1555A2C2E577AAA0013BF8F /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = B1555A2A2E577AAA0013BF8F /* Main.html */; };
+		B1555A2E2E577AAA0013BF8F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1555A2D2E577AAA0013BF8F /* Icon.png */; };
+		B1555A302E577AAA0013BF8F /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = B1555A2F2E577AAA0013BF8F /* Style.css */; };
+		B1555A322E577AAA0013BF8F /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = B1555A312E577AAA0013BF8F /* Script.js */; };
+		B1555A342E577AAA0013BF8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1555A332E577AAA0013BF8F /* ViewController.swift */; };
+		B1555A372E577AAA0013BF8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1555A352E577AAA0013BF8F /* Main.storyboard */; };
+		B1555A392E577AAB0013BF8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1555A382E577AAB0013BF8F /* Assets.xcassets */; };
+		B1555A462E577AAB0013BF8F /* There_Is_No_EscapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1555A452E577AAB0013BF8F /* There_Is_No_EscapeTests.swift */; };
+		B1555A502E577AAB0013BF8F /* There_Is_No_EscapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1555A4F2E577AAB0013BF8F /* There_Is_No_EscapeUITests.swift */; };
+		B1555A522E577AAB0013BF8F /* There_Is_No_EscapeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1555A512E577AAB0013BF8F /* There_Is_No_EscapeUITestsLaunchTests.swift */; };
+		B1555A582E577AAB0013BF8F /* There Is No Escape Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B1555A572E577AAB0013BF8F /* There Is No Escape Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B1555A5D2E577AAB0013BF8F /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1555A5C2E577AAB0013BF8F /* SafariWebExtensionHandler.swift */; };
+		B1555A7F2E577AAC0013BF8F /* There Is No Escape in Resources */ = {isa = PBXBuildFile; fileRef = B1555A702E577AAC0013BF8F /* There Is No Escape */; };
+		B1555A802E577AAC0013BF8F /* PRIVACY_POLICY.md in Resources */ = {isa = PBXBuildFile; fileRef = B1555A712E577AAC0013BF8F /* PRIVACY_POLICY.md */; };
+		B1555A812E577AAC0013BF8F /* icon-16.png in Resources */ = {isa = PBXBuildFile; fileRef = B1555A722E577AAC0013BF8F /* icon-16.png */; };
+		B1555A822E577AAC0013BF8F /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = B1555A732E577AAC0013BF8F /* popup.js */; };
+		B1555A832E577AAC0013BF8F /* generate-icons.sh in Resources */ = {isa = PBXBuildFile; fileRef = B1555A742E577AAC0013BF8F /* generate-icons.sh */; };
+		B1555A842E577AAC0013BF8F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B1555A752E577AAC0013BF8F /* LICENSE */; };
+		B1555A852E577AAC0013BF8F /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = B1555A762E577AAC0013BF8F /* popup.html */; };
+		B1555A862E577AAC0013BF8F /* icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = B1555A772E577AAC0013BF8F /* icon-48.png */; };
+		B1555A872E577AAC0013BF8F /* package-extension.sh in Resources */ = {isa = PBXBuildFile; fileRef = B1555A782E577AAC0013BF8F /* package-extension.sh */; };
+		B1555A882E577AAC0013BF8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B1555A792E577AAC0013BF8F /* README.md */; };
+		B1555A892E577AAC0013BF8F /* icon-base.svg in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7A2E577AAC0013BF8F /* icon-base.svg */; };
+		B1555A8A2E577AAC0013BF8F /* halo-esc-blocker.zip in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7B2E577AAC0013BF8F /* halo-esc-blocker.zip */; };
+		B1555A8B2E577AAC0013BF8F /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7C2E577AAC0013BF8F /* manifest.json */; };
+		B1555A8C2E577AAC0013BF8F /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7D2E577AAC0013BF8F /* content.js */; };
+		B1555A8D2E577AAC0013BF8F /* icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7E2E577AAC0013BF8F /* icon-128.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1555A422E577AAB0013BF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1555A1C2E577AA90013BF8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1555A232E577AA90013BF8F;
+			remoteInfo = "There Is No Escape";
+		};
+		B1555A4C2E577AAB0013BF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1555A1C2E577AA90013BF8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1555A232E577AA90013BF8F;
+			remoteInfo = "There Is No Escape";
+		};
+		B1555A592E577AAB0013BF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1555A1C2E577AA90013BF8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1555A562E577AAB0013BF8F;
+			remoteInfo = "There Is No Escape Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B1555A652E577AAB0013BF8F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B1555A582E577AAB0013BF8F /* There Is No Escape Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B1555A242E577AAA0013BF8F /* There Is No Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There Is No Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1555A272E577AAA0013BF8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B1555A2B2E577AAA0013BF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		B1555A2D2E577AAA0013BF8F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B1555A2F2E577AAA0013BF8F /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		B1555A312E577AAA0013BF8F /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		B1555A332E577AAA0013BF8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1555A362E577AAA0013BF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1555A382E577AAB0013BF8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1555A3A2E577AAB0013BF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1555A3B2E577AAB0013BF8F /* There_Is_No_Escape.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = There_Is_No_Escape.entitlements; sourceTree = "<group>"; };
+		B1555A3C2E577AAB0013BF8F /* There Is No Escape.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "There Is No Escape.entitlements"; sourceTree = "<group>"; };
+		B1555A412E577AAB0013BF8F /* There Is No EscapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "There Is No EscapeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1555A452E577AAB0013BF8F /* There_Is_No_EscapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = There_Is_No_EscapeTests.swift; sourceTree = "<group>"; };
+		B1555A4B2E577AAB0013BF8F /* There Is No EscapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "There Is No EscapeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1555A4F2E577AAB0013BF8F /* There_Is_No_EscapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = There_Is_No_EscapeUITests.swift; sourceTree = "<group>"; };
+		B1555A512E577AAB0013BF8F /* There_Is_No_EscapeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = There_Is_No_EscapeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B1555A572E577AAB0013BF8F /* There Is No Escape Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "There Is No Escape Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1555A5C2E577AAB0013BF8F /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		B1555A5E2E577AAB0013BF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1555A5F2E577AAB0013BF8F /* There_Is_No_Escape_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = There_Is_No_Escape_Extension.entitlements; sourceTree = "<group>"; };
+		B1555A702E577AAC0013BF8F /* There Is No Escape */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "There Is No Escape"; sourceTree = SOURCE_ROOT; };
+		B1555A712E577AAC0013BF8F /* PRIVACY_POLICY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = PRIVACY_POLICY.md; path = ../../PRIVACY_POLICY.md; sourceTree = "<group>"; };
+		B1555A722E577AAC0013BF8F /* icon-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-16.png"; path = "../../icon-16.png"; sourceTree = "<group>"; };
+		B1555A732E577AAC0013BF8F /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = ../../popup.js; sourceTree = "<group>"; };
+		B1555A742E577AAC0013BF8F /* generate-icons.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "generate-icons.sh"; path = "../../generate-icons.sh"; sourceTree = "<group>"; };
+		B1555A752E577AAC0013BF8F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
+		B1555A762E577AAC0013BF8F /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../popup.html; sourceTree = "<group>"; };
+		B1555A772E577AAC0013BF8F /* icon-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-48.png"; path = "../../icon-48.png"; sourceTree = "<group>"; };
+		B1555A782E577AAC0013BF8F /* package-extension.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "package-extension.sh"; path = "../../package-extension.sh"; sourceTree = "<group>"; };
+		B1555A792E577AAC0013BF8F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		B1555A7A2E577AAC0013BF8F /* icon-base.svg */ = {isa = PBXFileReference; lastKnownFileType = text; name = "icon-base.svg"; path = "../../icon-base.svg"; sourceTree = "<group>"; };
+		B1555A7B2E577AAC0013BF8F /* halo-esc-blocker.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "halo-esc-blocker.zip"; path = "../../halo-esc-blocker.zip"; sourceTree = "<group>"; };
+		B1555A7C2E577AAC0013BF8F /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../manifest.json; sourceTree = "<group>"; };
+		B1555A7D2E577AAC0013BF8F /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../content.js; sourceTree = "<group>"; };
+		B1555A7E2E577AAC0013BF8F /* icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-128.png"; path = "../../icon-128.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1555A212E577AA90013BF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A3E2E577AAB0013BF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A482E577AAB0013BF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A542E577AAB0013BF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1555A1B2E577AA90013BF8F = {
+			isa = PBXGroup;
+			children = (
+				B1555A262E577AAA0013BF8F /* There Is No Escape */,
+				B1555A442E577AAB0013BF8F /* There Is No EscapeTests */,
+				B1555A4E2E577AAB0013BF8F /* There Is No EscapeUITests */,
+				B1555A5B2E577AAB0013BF8F /* There Is No Escape Extension */,
+				B1555A252E577AAA0013BF8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1555A252E577AAA0013BF8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1555A242E577AAA0013BF8F /* There Is No Escape.app */,
+				B1555A412E577AAB0013BF8F /* There Is No EscapeTests.xctest */,
+				B1555A4B2E577AAB0013BF8F /* There Is No EscapeUITests.xctest */,
+				B1555A572E577AAB0013BF8F /* There Is No Escape Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1555A262E577AAA0013BF8F /* There Is No Escape */ = {
+			isa = PBXGroup;
+			children = (
+				B1555A272E577AAA0013BF8F /* AppDelegate.swift */,
+				B1555A332E577AAA0013BF8F /* ViewController.swift */,
+				B1555A352E577AAA0013BF8F /* Main.storyboard */,
+				B1555A382E577AAB0013BF8F /* Assets.xcassets */,
+				B1555A3A2E577AAB0013BF8F /* Info.plist */,
+				B1555A3B2E577AAB0013BF8F /* There_Is_No_Escape.entitlements */,
+				B1555A3C2E577AAB0013BF8F /* There Is No Escape.entitlements */,
+				B1555A292E577AAA0013BF8F /* Resources */,
+			);
+			path = "There Is No Escape";
+			sourceTree = "<group>";
+		};
+		B1555A292E577AAA0013BF8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1555A2A2E577AAA0013BF8F /* Main.html */,
+				B1555A2D2E577AAA0013BF8F /* Icon.png */,
+				B1555A2F2E577AAA0013BF8F /* Style.css */,
+				B1555A312E577AAA0013BF8F /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B1555A442E577AAB0013BF8F /* There Is No EscapeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1555A452E577AAB0013BF8F /* There_Is_No_EscapeTests.swift */,
+			);
+			path = "There Is No EscapeTests";
+			sourceTree = "<group>";
+		};
+		B1555A4E2E577AAB0013BF8F /* There Is No EscapeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B1555A4F2E577AAB0013BF8F /* There_Is_No_EscapeUITests.swift */,
+				B1555A512E577AAB0013BF8F /* There_Is_No_EscapeUITestsLaunchTests.swift */,
+			);
+			path = "There Is No EscapeUITests";
+			sourceTree = "<group>";
+		};
+		B1555A5B2E577AAB0013BF8F /* There Is No Escape Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B1555A6F2E577AAC0013BF8F /* Resources */,
+				B1555A5C2E577AAB0013BF8F /* SafariWebExtensionHandler.swift */,
+				B1555A5E2E577AAB0013BF8F /* Info.plist */,
+				B1555A5F2E577AAB0013BF8F /* There_Is_No_Escape_Extension.entitlements */,
+			);
+			path = "There Is No Escape Extension";
+			sourceTree = "<group>";
+		};
+		B1555A6F2E577AAC0013BF8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1555A702E577AAC0013BF8F /* There Is No Escape */,
+				B1555A712E577AAC0013BF8F /* PRIVACY_POLICY.md */,
+				B1555A722E577AAC0013BF8F /* icon-16.png */,
+				B1555A732E577AAC0013BF8F /* popup.js */,
+				B1555A742E577AAC0013BF8F /* generate-icons.sh */,
+				B1555A752E577AAC0013BF8F /* LICENSE */,
+				B1555A762E577AAC0013BF8F /* popup.html */,
+				B1555A772E577AAC0013BF8F /* icon-48.png */,
+				B1555A782E577AAC0013BF8F /* package-extension.sh */,
+				B1555A792E577AAC0013BF8F /* README.md */,
+				B1555A7A2E577AAC0013BF8F /* icon-base.svg */,
+				B1555A7B2E577AAC0013BF8F /* halo-esc-blocker.zip */,
+				B1555A7C2E577AAC0013BF8F /* manifest.json */,
+				B1555A7D2E577AAC0013BF8F /* content.js */,
+				B1555A7E2E577AAC0013BF8F /* icon-128.png */,
+			);
+			name = Resources;
+			path = "There Is No Escape Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1555A232E577AA90013BF8F /* There Is No Escape */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1555A662E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No Escape" */;
+			buildPhases = (
+				B1555A202E577AA90013BF8F /* Sources */,
+				B1555A212E577AA90013BF8F /* Frameworks */,
+				B1555A222E577AA90013BF8F /* Resources */,
+				B1555A652E577AAB0013BF8F /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1555A5A2E577AAB0013BF8F /* PBXTargetDependency */,
+			);
+			name = "There Is No Escape";
+			packageProductDependencies = (
+			);
+			productName = "There Is No Escape";
+			productReference = B1555A242E577AAA0013BF8F /* There Is No Escape.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1555A402E577AAB0013BF8F /* There Is No EscapeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1555A692E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No EscapeTests" */;
+			buildPhases = (
+				B1555A3D2E577AAB0013BF8F /* Sources */,
+				B1555A3E2E577AAB0013BF8F /* Frameworks */,
+				B1555A3F2E577AAB0013BF8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1555A432E577AAB0013BF8F /* PBXTargetDependency */,
+			);
+			name = "There Is No EscapeTests";
+			packageProductDependencies = (
+			);
+			productName = "There Is No EscapeTests";
+			productReference = B1555A412E577AAB0013BF8F /* There Is No EscapeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1555A4A2E577AAB0013BF8F /* There Is No EscapeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1555A6C2E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No EscapeUITests" */;
+			buildPhases = (
+				B1555A472E577AAB0013BF8F /* Sources */,
+				B1555A482E577AAB0013BF8F /* Frameworks */,
+				B1555A492E577AAB0013BF8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1555A4D2E577AAB0013BF8F /* PBXTargetDependency */,
+			);
+			name = "There Is No EscapeUITests";
+			packageProductDependencies = (
+			);
+			productName = "There Is No EscapeUITests";
+			productReference = B1555A4B2E577AAB0013BF8F /* There Is No EscapeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B1555A562E577AAB0013BF8F /* There Is No Escape Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1555A622E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No Escape Extension" */;
+			buildPhases = (
+				B1555A532E577AAB0013BF8F /* Sources */,
+				B1555A542E577AAB0013BF8F /* Frameworks */,
+				B1555A552E577AAB0013BF8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "There Is No Escape Extension";
+			packageProductDependencies = (
+			);
+			productName = "There Is No Escape Extension";
+			productReference = B1555A572E577AAB0013BF8F /* There Is No Escape Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1555A1C2E577AA90013BF8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					B1555A232E577AA90013BF8F = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					B1555A402E577AAB0013BF8F = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = B1555A232E577AA90013BF8F;
+					};
+					B1555A4A2E577AAB0013BF8F = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = B1555A232E577AA90013BF8F;
+					};
+					B1555A562E577AAB0013BF8F = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = B1555A1F2E577AA90013BF8F /* Build configuration list for PBXProject "There Is No Escape" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1555A1B2E577AA90013BF8F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B1555A252E577AAA0013BF8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1555A232E577AA90013BF8F /* There Is No Escape */,
+				B1555A402E577AAB0013BF8F /* There Is No EscapeTests */,
+				B1555A4A2E577AAB0013BF8F /* There Is No EscapeUITests */,
+				B1555A562E577AAB0013BF8F /* There Is No Escape Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1555A222E577AA90013BF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1555A2E2E577AAA0013BF8F /* Icon.png in Resources */,
+				B1555A372E577AAA0013BF8F /* Main.storyboard in Resources */,
+				B1555A322E577AAA0013BF8F /* Script.js in Resources */,
+				B1555A2C2E577AAA0013BF8F /* Main.html in Resources */,
+				B1555A392E577AAB0013BF8F /* Assets.xcassets in Resources */,
+				B1555A302E577AAA0013BF8F /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A3F2E577AAB0013BF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A492E577AAB0013BF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A552E577AAB0013BF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1555A862E577AAC0013BF8F /* icon-48.png in Resources */,
+				B1555A852E577AAC0013BF8F /* popup.html in Resources */,
+				B1555A882E577AAC0013BF8F /* README.md in Resources */,
+				B1555A8B2E577AAC0013BF8F /* manifest.json in Resources */,
+				B1555A842E577AAC0013BF8F /* LICENSE in Resources */,
+				B1555A7F2E577AAC0013BF8F /* There Is No Escape in Resources */,
+				B1555A802E577AAC0013BF8F /* PRIVACY_POLICY.md in Resources */,
+				B1555A812E577AAC0013BF8F /* icon-16.png in Resources */,
+				B1555A832E577AAC0013BF8F /* generate-icons.sh in Resources */,
+				B1555A8A2E577AAC0013BF8F /* halo-esc-blocker.zip in Resources */,
+				B1555A892E577AAC0013BF8F /* icon-base.svg in Resources */,
+				B1555A872E577AAC0013BF8F /* package-extension.sh in Resources */,
+				B1555A8C2E577AAC0013BF8F /* content.js in Resources */,
+				B1555A822E577AAC0013BF8F /* popup.js in Resources */,
+				B1555A8D2E577AAC0013BF8F /* icon-128.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1555A202E577AA90013BF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1555A342E577AAA0013BF8F /* ViewController.swift in Sources */,
+				B1555A282E577AAA0013BF8F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A3D2E577AAB0013BF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1555A462E577AAB0013BF8F /* There_Is_No_EscapeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A472E577AAB0013BF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1555A502E577AAB0013BF8F /* There_Is_No_EscapeUITests.swift in Sources */,
+				B1555A522E577AAB0013BF8F /* There_Is_No_EscapeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1555A532E577AAB0013BF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1555A5D2E577AAB0013BF8F /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1555A432E577AAB0013BF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1555A232E577AA90013BF8F /* There Is No Escape */;
+			targetProxy = B1555A422E577AAB0013BF8F /* PBXContainerItemProxy */;
+		};
+		B1555A4D2E577AAB0013BF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1555A232E577AA90013BF8F /* There Is No Escape */;
+			targetProxy = B1555A4C2E577AAB0013BF8F /* PBXContainerItemProxy */;
+		};
+		B1555A5A2E577AAB0013BF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1555A562E577AAB0013BF8F /* There Is No Escape Extension */;
+			targetProxy = B1555A592E577AAB0013BF8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1555A2A2E577AAA0013BF8F /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1555A2B2E577AAA0013BF8F /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		B1555A352E577AAA0013BF8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1555A362E577AAA0013BF8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1555A602E577AAB0013BF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1555A612E577AAB0013BF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B1555A632E577AAB0013BF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "There Is No Escape Extension/There_Is_No_Escape_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "There Is No Escape Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "There Is No Escape Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-Escape.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B1555A642E577AAB0013BF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "There Is No Escape Extension/There_Is_No_Escape_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "There Is No Escape Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "There Is No Escape Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-Escape.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B1555A672E577AAB0013BF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "There Is No Escape/There Is No Escape.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "There Is No Escape/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "There Is No Escape";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-Escape";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B1555A682E577AAB0013BF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "There Is No Escape/There Is No Escape.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "There Is No Escape/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "There Is No Escape";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-Escape";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B1555A6A2E577AAB0013BF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-EscapeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/There Is No Escape.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/There Is No Escape";
+			};
+			name = Debug;
+		};
+		B1555A6B2E577AAB0013BF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-EscapeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/There Is No Escape.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/There Is No Escape";
+			};
+			name = Release;
+		};
+		B1555A6D2E577AAB0013BF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-EscapeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "There Is No Escape";
+			};
+			name = Debug;
+		};
+		B1555A6E2E577AAB0013BF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK7HCG46US;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.snowskeleton.There-Is-No-EscapeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "There Is No Escape";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1555A1F2E577AA90013BF8F /* Build configuration list for PBXProject "There Is No Escape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1555A602E577AAB0013BF8F /* Debug */,
+				B1555A612E577AAB0013BF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1555A622E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No Escape Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1555A632E577AAB0013BF8F /* Debug */,
+				B1555A642E577AAB0013BF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1555A662E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No Escape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1555A672E577AAB0013BF8F /* Debug */,
+				B1555A682E577AAB0013BF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1555A692E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No EscapeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1555A6A2E577AAB0013BF8F /* Debug */,
+				B1555A6B2E577AAB0013BF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1555A6C2E577AAB0013BF8F /* Build configuration list for PBXNativeTarget "There Is No EscapeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1555A6D2E577AAB0013BF8F /* Debug */,
+				B1555A6E2E577AAB0013BF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1555A1C2E577AA90013BF8F /* Project object */;
+}

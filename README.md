@@ -11,10 +11,21 @@ A Chrome extension that prevents HaloPSA from capturing the Esc key, so you neve
 
 ## Installation
 
+### Safari (Mac App Store)
+
+1. **Install There Is No Escape** from the Mac App Store
+2. **Enable the extension**
+   - Open the There Is No Escape app
+   - Follow the on-screen instructions to open Safari, then go to **Settings → Extensions**
+   - Toggle **There Is No Escape** on
+3. Navigate to any `*.halopsa.com` page — Esc is now blocked
+
+> If the extension doesn't appear or behaves unexpectedly, try relaunching Safari.
+
 ### Chrome Web Store (Coming Soon)
 The extension will be available on the Chrome Web Store shortly. We'll update this README with the store link once it's approved.
 
-### Manual Installation (Developer Mode)
+### Chrome Manual Installation (Developer Mode)
 
 1. **Download or clone this repository**
    ```bash
