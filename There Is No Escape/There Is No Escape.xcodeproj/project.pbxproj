@@ -34,6 +34,8 @@
 		B1555A8A2E577AAC0013BF8F /* halo-esc-blocker.zip in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7B2E577AAC0013BF8F /* halo-esc-blocker.zip */; };
 		B1555A8B2E577AAC0013BF8F /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7C2E577AAC0013BF8F /* manifest.json */; };
 		B1555A8C2E577AAC0013BF8F /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7D2E577AAC0013BF8F /* content.js */; };
+		B1555A9C2E577AAC0013BF8F /* shortcuts.js in Resources */ = {isa = PBXBuildFile; fileRef = B1555A9A2E577AAC0013BF8F /* shortcuts.js */; };
+		B1555A9D2E577AAC0013BF8F /* hotkeys.js in Resources */ = {isa = PBXBuildFile; fileRef = B1555A9B2E577AAC0013BF8F /* hotkeys.js */; };
 		B1555A8D2E577AAC0013BF8F /* icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = B1555A7E2E577AAC0013BF8F /* icon-128.png */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		B1555A7B2E577AAC0013BF8F /* halo-esc-blocker.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "halo-esc-blocker.zip"; path = "../../halo-esc-blocker.zip"; sourceTree = "<group>"; };
 		B1555A7C2E577AAC0013BF8F /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../manifest.json; sourceTree = "<group>"; };
 		B1555A7D2E577AAC0013BF8F /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../content.js; sourceTree = "<group>"; };
+		B1555A9A2E577AAC0013BF8F /* shortcuts.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = shortcuts.js; path = ../../shortcuts.js; sourceTree = "<group>"; };
+		B1555A9B2E577AAC0013BF8F /* hotkeys.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = hotkeys.js; path = ../../hotkeys.js; sourceTree = "<group>"; };
 		B1555A7E2E577AAC0013BF8F /* icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-128.png"; path = "../../icon-128.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +242,8 @@
 				B1555A7A2E577AAC0013BF8F /* icon-base.svg */,
 				B1555A7B2E577AAC0013BF8F /* halo-esc-blocker.zip */,
 				B1555A7C2E577AAC0013BF8F /* manifest.json */,
+				B1555A9A2E577AAC0013BF8F /* shortcuts.js */,
+				B1555A9B2E577AAC0013BF8F /* hotkeys.js */,
 				B1555A7D2E577AAC0013BF8F /* content.js */,
 				B1555A7E2E577AAC0013BF8F /* icon-128.png */,
 			);
@@ -421,6 +427,8 @@
 				B1555A892E577AAC0013BF8F /* icon-base.svg in Resources */,
 				B1555A872E577AAC0013BF8F /* package-extension.sh in Resources */,
 				B1555A8C2E577AAC0013BF8F /* content.js in Resources */,
+				B1555A9C2E577AAC0013BF8F /* shortcuts.js in Resources */,
+				B1555A9D2E577AAC0013BF8F /* hotkeys.js in Resources */,
 				B1555A822E577AAC0013BF8F /* popup.js in Resources */,
 				B1555A8D2E577AAC0013BF8F /* icon-128.png in Resources */,
 			);
@@ -626,7 +634,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "There Is No Escape Extension/There_Is_No_Escape_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = PK7HCG46US;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -657,7 +665,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "There Is No Escape Extension/There_Is_No_Escape_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = PK7HCG46US;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;

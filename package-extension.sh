@@ -11,6 +11,8 @@ rm -f halo-esc-blocker.zip
 zip -r halo-esc-blocker.zip \
   manifest.json \
   content.js \
+  shortcuts.js \
+  hotkeys.js \
   popup.html \
   popup.js \
   icon-16.png \
