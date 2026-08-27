@@ -1,13 +1,51 @@
 # Halo Esc Key Blocker
 
-A Chrome extension that prevents HaloPSA from capturing the Esc key, so you never lose work due to accidental key presses.
+A browser extension for HaloPSA. It stops Halo from capturing the Esc key, so you never
+lose work to an accidental key press, and it adds keyboard shortcuts for common ticket
+actions.
 
 ## Features
 
 - **Block Esc key** - Prevents HaloPSA from capturing Esc key presses
-- **Configurable settings** - Enable/disable blocking with a simple toggle
 - **Double-Esc bypass** - Optional feature to allow double-Esc within a configurable timeout to pass through
+- **Ticket hotkeys** - Single-key shortcuts for ticket actions, plus arrow-key navigation between sidebar lists
+- **Configurable settings** - Toggle either feature from the popup
 - **Local storage** - All settings stored locally, no data collection
+
+## Hotkeys
+
+Active on a ticket when you're not focused in a text field. Toggle them off from the
+popup if you don't want them.
+
+| Key | Action |
+|-----|--------|
+| `a` | Acknowledge |
+| `c` | Copy ticket link to clipboard |
+| `e` | Email User / Email Co-Managed |
+| `o` | Request Order |
+| `r` | Re-Assign |
+| `R` | Re-Assign Co-Managed |
+| `s` | Create Appointment |
+| `w` | Work Note / Add Work Note |
+| `q` | Resolve Ticket / Resolve Co-Managed |
+
+Where two labels are listed, whichever button the current ticket has is used.
+
+### Moving between lists
+
+| Key | Action |
+|-----|--------|
+| `Alt`+`↑` / `↓` | Previous / next sidebar list (macOS) |
+| `Ctrl`+`↑` / `↓` | Previous / next sidebar list (Windows, Linux) |
+
+Selection wraps at both ends and skips lists inside collapsed branches. macOS reserves
+`Ctrl`+`↑`/`↓` for Mission Control and App Exposé, so Macs default to `Alt` (Option);
+whichever isn't your platform's default still works as an alias.
+
+HaloPSA doesn't mark the selected list in the DOM, so position is worked out by
+checking, in order: a `selected`-style class (trusted only if exactly one list has one),
+the `selid` parameter in the URL, and the last list navigated to. Mouse clicks on lists
+are watched too, so it doesn't lose its place.
 
 ## Installation
 
@@ -45,6 +83,7 @@ https://chromewebstore.google.com/detail/halo-esc-key-blocker/ecpfoneoclmhemfbhi
 4. **Test it out**
    - Navigate to any `*.halopsa.com` page
    - Try pressing Esc - it should be blocked!
+   - Open a ticket and press `a` to acknowledge it
    - Click the extension icon to configure settings
 
 ## Usage
@@ -60,6 +99,24 @@ https://chromewebstore.google.com/detail/halo-esc-key-blocker/ecpfoneoclmhemfbhi
 - **Block Esc key**: Master toggle to enable/disable Esc key blocking
 - **Double-Esc bypass**: Allow pressing Esc twice quickly to let it through to HaloPSA
 - **Timeout**: How many milliseconds to wait for the second Esc press
+- **Ticket hotkeys**: Master toggle for the keyboard shortcuts above
+
+## Layout
+
+The extension source lives at the repo root and is shared by both the Chrome build and
+the Safari app, which references these files from
+`There Is No Escape.xcodeproj`. Adding a file means adding it to the Safari extension
+target's Resources build phase as well as to `package-extension.sh`.
+
+```
+manifest.json     two content_scripts entries: the Esc blocker and the hotkeys
+content.js        Esc blocking, at document_start
+shortcuts.js      the hotkey table — shared by hotkeys.js and popup.js
+hotkeys.js        ticket actions and list navigation, at document_idle
+popup.html/.js    settings for both features, plus the hotkey cheat sheet
+```
+
+To change or add a hotkey, edit `shortcuts.js`; the popup picks it up automatically.
 
 ## Development
 
