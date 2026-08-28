@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Halo Esc Key Blocker",
-  "version": "0.2",
-  "description": "Stops halopsa.com capturing the Esc key, and adds keyboard shortcuts for ticket actions",
+  "version": "0.3",
+  "description": "Stops halopsa.com capturing the Esc key, adds keyboard shortcuts for ticket actions, and alerts on billing tags that need approval",
   "content_scripts": [
     {
       "matches": [
@@ -22,6 +22,20 @@
         "hotkeys.js"
       ],
       "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.halopsa.com/*"
+      ],
+      "js": [
+        "tags.js",
+        "approval-alert.js"
+      ],
+      "css": [
+        "approval-alert.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
     }
   ],
   "action": {
