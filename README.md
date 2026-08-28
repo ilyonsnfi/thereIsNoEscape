@@ -1,15 +1,16 @@
 # Halo Esc Key Blocker
 
 A browser extension for HaloPSA. It stops Halo from capturing the Esc key, so you never
-lose work to an accidental key press, and it adds keyboard shortcuts for common ticket
-actions.
+lose work to an accidental key press, adds keyboard shortcuts for common ticket actions,
+and warns you when a ticket or caller carries a billing tag that needs approval first.
 
 ## Features
 
 - **Block Esc key** - Prevents HaloPSA from capturing Esc key presses
 - **Double-Esc bypass** - Optional feature to allow double-Esc within a configurable timeout to pass through
 - **Ticket hotkeys** - Single-key shortcuts for ticket actions, plus arrow-key navigation between sidebar lists
-- **Configurable settings** - Toggle either feature from the popup
+- **Billing tag alerts** - Banner when an open ticket or caller has a tag like Requires Approval Non-Contract
+- **Configurable settings** - Toggle each feature independently from the popup
 - **Local storage** - All settings stored locally, no data collection
 
 ## Hotkeys
@@ -46,6 +47,31 @@ HaloPSA doesn't mark the selected list in the DOM, so position is worked out by
 checking, in order: a `selected`-style class (trusted only if exactly one list has one),
 the `selid` parameter in the URL, and the last list navigated to. Mouse clicks on lists
 are watched too, so it doesn't lose its place.
+
+## Billing tag alerts
+
+When a ticket page, contact panel, or incoming-call popup shows one of the watched
+billing tags, a banner appears in the top right with a short chime. Dismiss it and it
+stays gone until you move to another ticket.
+
+| Tag | Alerts by default |
+|-----|-------------------|
+| Requires Approval Non-Contract | Yes |
+| Non-Billed User | No |
+| Pre-Approved Non-Contract | No |
+
+Each tag has its own checkbox in the popup, and the chime can be switched off on its
+own. To watch for a different tag, add it to `tags.js` — the popup picks it up
+automatically, and the `default` field decides whether it alerts before anyone touches
+the settings.
+
+Only tags Halo renders as *applied* count. The "Tags - Billing" edit panel lists every
+possible tag whether or not it's set, so matches inside a grid of checkboxes are
+ignored — otherwise opening that panel would alert on every ticket.
+
+If a tag isn't being picked up, open DevTools on the ticket, switch the console's
+context dropdown from `top` to this extension, and run `__haloTagDebug()`. It logs every
+match it found and why.
 
 ## Installation
 
@@ -100,6 +126,10 @@ https://chromewebstore.google.com/detail/halo-esc-key-blocker/ecpfoneoclmhemfbhi
 - **Double-Esc bypass**: Allow pressing Esc twice quickly to let it through to HaloPSA
 - **Timeout**: How many milliseconds to wait for the second Esc press
 - **Ticket hotkeys**: Master toggle for the keyboard shortcuts above
+- **Billing tag alerts**: Master toggle for the tag banner, with a checkbox per tag and one for the chime
+
+Only the Esc settings need a reload to take effect; the hotkeys and tag alerts pick up
+changes straight away.
 
 ## Layout
 
@@ -109,14 +139,18 @@ the Safari app, which references these files from
 target's Resources build phase as well as to `package-extension.sh`.
 
 ```
-manifest.json     two content_scripts entries: the Esc blocker and the hotkeys
-content.js        Esc blocking, at document_start
-shortcuts.js      the hotkey table — shared by hotkeys.js and popup.js
-hotkeys.js        ticket actions and list navigation, at document_idle
-popup.html/.js    settings for both features, plus the hotkey cheat sheet
+manifest.json      three content_scripts entries: Esc blocker, hotkeys, tag alerts
+content.js         Esc blocking, at document_start
+shortcuts.js       the hotkey table — shared by hotkeys.js and popup.js
+hotkeys.js         ticket actions and list navigation, at document_idle
+tags.js            the billing tag table — shared by approval-alert.js and popup.js
+approval-alert.js  tag detection and the banner, at document_idle, in all frames
+approval-alert.css the banner's styling
+popup.html/.js     settings for all three features, plus the hotkey cheat sheet
 ```
 
-To change or add a hotkey, edit `shortcuts.js`; the popup picks it up automatically.
+To change or add a hotkey, edit `shortcuts.js`; to change the watched billing tags, edit
+`tags.js`. The popup picks up both automatically.
 
 ## Development
 
