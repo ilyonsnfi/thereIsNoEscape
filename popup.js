@@ -4,12 +4,22 @@ document.addEventListener('DOMContentLoaded', async function() {
   const timeoutInput = document.getElementById('timeout');
   const reloadNotice = document.getElementById('reloadNotice');
   const hotkeysCheckbox = document.getElementById('hotkeysEnabled');
+  const alertCheckbox = document.getElementById('approvalAlertEnabled');
+  const alertSoundCheckbox = document.getElementById('approvalAlertSound');
+  const alertOptions = document.getElementById('approvalAlertOptions');
+
+  // Build the per-tag checkboxes before the first await, so they exist by the
+  // time the stored settings come back.
+  const tagCheckboxes = renderTagToggles();
 
   const result = await chrome.storage.sync.get({
     enabled: true,
     doubleEscBypass: false,
     timeout: 500,
-    hotkeysEnabled: true
+    hotkeysEnabled: true,
+    approvalAlertEnabled: true,
+    approvalAlertSound: true,
+    approvalAlertTags: {}
   });
 
   const originalSettings = {
@@ -24,7 +34,16 @@ document.addEventListener('DOMContentLoaded', async function() {
   doubleEscCheckbox.checked = result.doubleEscBypass;
   timeoutInput.value = result.timeout;
   hotkeysCheckbox.checked = result.hotkeysEnabled;
-  
+  alertCheckbox.checked = result.approvalAlertEnabled;
+  alertSoundCheckbox.checked = result.approvalAlertSound;
+
+  // Only tags the user has changed are stored; the rest follow tags.js.
+  const tagOverrides = result.approvalAlertTags;
+  for (const { tag, input } of tagCheckboxes) {
+    const override = tagOverrides[tag.text];
+    input.checked = override === undefined ? !!tag.default : override;
+  }
+
   function updateTimeoutVisibility() {
     const timeoutContainer = document.getElementById('timeoutContainer');
     if (doubleEscCheckbox.checked) {
@@ -48,7 +67,16 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
   }
   
+  function updateAlertOptionsVisibility() {
+    if (alertCheckbox.checked) {
+      alertOptions.classList.remove('hidden');
+    } else {
+      alertOptions.classList.add('hidden');
+    }
+  }
+
   updateTimeoutVisibility();
+  updateAlertOptionsVisibility();
 
   enabledCheckbox.addEventListener('change', function() {
     currentSettings.enabled = this.checked;
@@ -66,6 +94,22 @@ document.addEventListener('DOMContentLoaded', async function() {
   hotkeysCheckbox.addEventListener('change', function() {
     chrome.storage.sync.set({ hotkeysEnabled: this.checked });
   });
+
+  alertCheckbox.addEventListener('change', function() {
+    chrome.storage.sync.set({ approvalAlertEnabled: this.checked });
+    updateAlertOptionsVisibility();
+  });
+
+  alertSoundCheckbox.addEventListener('change', function() {
+    chrome.storage.sync.set({ approvalAlertSound: this.checked });
+  });
+
+  for (const { tag, input } of tagCheckboxes) {
+    input.addEventListener('change', function() {
+      tagOverrides[tag.text] = this.checked;
+      chrome.storage.sync.set({ approvalAlertTags: tagOverrides });
+    });
+  }
 
   timeoutInput.addEventListener('input', function() {
     const value = parseInt(this.value);
@@ -107,3 +151,24 @@ document.addEventListener('DOMContentLoaded', function() {
     row.insertCell().textContent = label;
   }
 });
+
+// Render a checkbox per billing tag from the same table the content script uses.
+function renderTagToggles() {
+  const container = document.getElementById('tagToggles');
+  return globalThis.HALO_TAGS.map(function(tag) {
+    const row = document.createElement('div');
+    row.className = 'toggle-container sub';
+
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.id = 'tag-' + tag.text.replace(/\s+/g, '-');
+
+    const label = document.createElement('label');
+    label.htmlFor = input.id;
+    label.textContent = tag.label;
+
+    row.append(input, label);
+    container.append(row);
+    return { tag, input };
+  });
+}
