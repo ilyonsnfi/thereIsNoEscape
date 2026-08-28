@@ -39,6 +39,13 @@
       padding: 2px 4px;
       font-size: 12px;
     }
+    .toggle-container.sub {
+      margin-left: 20px;
+      margin-bottom: 6px;
+    }
+    .toggle-container.sub label {
+      font-size: 12px;
+    }
     .hidden {
       display: none;
     }
@@ -117,7 +124,24 @@
 
   <table class="keys" id="shortcuts"></table>
 
+  <hr>
+
+  <div class="toggle-container">
+    <input type="checkbox" id="approvalAlertEnabled" checked>
+    <label for="approvalAlertEnabled">Billing tag alerts</label>
+  </div>
+  <div class="description">Banner when a ticket or caller carries a tag below</div>
+
+  <div id="approvalAlertOptions">
+    <div id="tagToggles"></div>
+    <div class="toggle-container sub">
+      <input type="checkbox" id="approvalAlertSound" checked>
+      <label for="approvalAlertSound">Play a sound</label>
+    </div>
+  </div>
+
   <script src="shortcuts.js"></script>
+  <script src="tags.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

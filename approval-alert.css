@@ -1,0 +1,49 @@
+#halo-approval-alert-banner {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  max-width: 360px;
+  background: #b91c1c;
+  color: #fff;
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  padding: 14px 16px;
+  animation: halo-alert-in 0.2s ease-out;
+}
+
+@keyframes halo-alert-in {
+  from { transform: translateY(-12px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+#halo-approval-alert-banner .halo-alert-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#halo-approval-alert-banner .halo-alert-body {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+#halo-approval-alert-banner button {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#halo-approval-alert-banner button:hover {
+  background: rgba(255,255,255,0.3);
+}

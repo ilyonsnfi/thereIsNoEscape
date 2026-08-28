@@ -13,6 +13,9 @@ zip -r halo-esc-blocker.zip \
   content.js \
   shortcuts.js \
   hotkeys.js \
+  tags.js \
+  approval-alert.js \
+  approval-alert.css \
   popup.html \
   popup.js \
   icon-16.png \
