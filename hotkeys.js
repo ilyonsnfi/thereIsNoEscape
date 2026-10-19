@@ -48,9 +48,19 @@
         setTimeout(() => { el.remove(); }, 2000);
     }
 
+    // SPA navigation doesn't reliably update the URL, so read the ID out of the
+    // DOM. Halo has moved it before: older builds put the bare ID on
+    // .dropzone-container; current builds put "dz-<id>" on a wrapper div around
+    // it. Try the current layout, then the old one, then the URL as a last resort.
     function getTicketId() {
-        // SPA navigation doesn't reliably update the URL — read it out of the DOM
-        return document.querySelector('#ticketdetails-details .dropzone-container')?.id || null;
+        const details = document.querySelector('#ticketdetails-details');
+        if (!details) return null;
+        const candidates = [
+            details.querySelector('[id^="dz-"]')?.id.slice(3),
+            details.querySelector('.dropzone-container')?.id,
+            new URLSearchParams(location.search).get('id'),
+        ];
+        return candidates.find(id => /^\d+$/.test(id || '')) || null;
     }
 
     function findActionButton(labels) {

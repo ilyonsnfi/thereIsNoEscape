@@ -21,7 +21,12 @@ chrome.storage.onChanged.addListener(function(changes) {
   }
 });
 
-document.addEventListener('keydown', function(event) {
+// Listen on window in the capture phase: window is the first stop on every
+// keydown's path, so this runs before anything HaloPSA registers on document
+// or below. Halo's modal now listens on document in the capture phase too,
+// and stopPropagation() can't stop other listeners on the same node, so we
+// also use stopImmediatePropagation() for anything else registered on window.
+window.addEventListener('keydown', function(event) {
   if (event.key === 'Escape' && settings.enabled) {
     const currentTime = Date.now();
     const timeDiff = currentTime - lastEscTime;
@@ -33,7 +38,7 @@ document.addEventListener('keydown', function(event) {
     }
     
     lastEscTime = currentTime;
-    event.stopPropagation();
+    event.stopImmediatePropagation();
     event.preventDefault();
     console.log('Esc key intercepted and blocked on halopsa.com');
   }
