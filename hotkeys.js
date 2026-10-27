@@ -48,19 +48,39 @@
         setTimeout(() => { el.remove(); }, 2000);
     }
 
-    // SPA navigation doesn't reliably update the URL, so read the ID out of the
-    // DOM. Halo has moved it before: older builds put the bare ID on
-    // .dropzone-container; current builds put "dz-<id>" on a wrapper div around
-    // it. Try the current layout, then the old one, then the URL as a last resort.
+    // SPA navigation doesn't reliably update the URL, so read the ID from what
+    // Halo shows the user rather than from its markup, which changes between
+    // releases. The ticket header renders as a line of text on its own:
+    //   [ID:0220183]
+    // Only a text node that is exactly that counts. Summaries carry email
+    // subjects like "RE: [ID:0219000] ...", which can point at a different
+    // ticket, and the anchored match skips them. Ticket notes render inside
+    // iframes, which this walk never enters.
+    //
+    // Walking every text node in the page takes a few milliseconds, and this
+    // only runs on a keypress, so there's no need to guess at a container.
+    const TICKET_ID_TEXT = /^\[ID:\s*0*(\d+)\]$/;
+
+    function isShown(el) {
+        if (typeof el.checkVisibility === 'function') return el.checkVisibility();
+        return el.getClientRects().length > 0;
+    }
+
     function getTicketId() {
-        const details = document.querySelector('#ticketdetails-details');
-        if (!details) return null;
-        const candidates = [
-            details.querySelector('[id^="dz-"]')?.id.slice(3),
-            details.querySelector('.dropzone-container')?.id,
-            new URLSearchParams(location.search).get('id'),
-        ];
-        return candidates.find(id => /^\d+$/.test(id || '')) || null;
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode: n => n.nodeValue.includes('ID:')
+                ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP,
+        });
+        let node;
+        while ((node = walker.nextNode())) {
+            const m = node.nodeValue.trim().match(TICKET_ID_TEXT);
+            // Halo tabs can leave other tickets in the DOM, hidden
+            if (m && isShown(node.parentElement)) return m[1];
+        }
+
+        // Last resort: Halo usually, but not always, keeps ?id= current
+        const fromUrl = new URLSearchParams(location.search).get('id');
+        return fromUrl && /^\d+$/.test(fromUrl) ? fromUrl : null;
     }
 
     function findActionButton(labels) {
